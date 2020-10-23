@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Rock, paper, scissors</title>
+    </head>
+    <body>
+        <script>
+            function computerPlay () {
+                let array = ["rock", "paper", "scissors"];
+                let choice = array[Math.floor(Math.random() * array.length)];
+                 return choice;
+            }
+            function humanPlay () {     
+                let request = prompt("Choose rock, paper or scissors");
+                let response = request.toLowerCase() 
+                return response;
+            }
+
+             function game (playerSelection, computerSelection) {
+                (playerSelection == "rock" && computerSelection == "scissors") ? alert("You win, rock beats scissors"):
+                (playerSelection == "rock" && computerSelection == "paper") ? alert("You lose, paper beats rock"):
+                (playerSelection == "scissors" && computerSelection == "rock") ? alert("You lose, rock beats scissors"):
+                (playerSelection == "scissors" && computerSelection == "paper") ? alert("You win, scissors cuts paper"):
+                (playerSelection == "paper" && computerSelection == "rock") ? alert("You win, paper beats rock"):
+                (playerSelection == "paper" && computerSelection == "scissors") ? alert("You lose, scissors cuts paper"):
+                (playerSelection == computerSelection) ? alert("It's a draw"):
+                alert("Please follow the instructions");                
+             }
+
+            console.log(game (humanPlay(), computerPlay())); 
+               
+        </script>
+    </body>
+</html>

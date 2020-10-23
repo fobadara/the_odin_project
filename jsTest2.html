@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Function library example</title>
+        <style>
+            input {
+            font-size: 2em;
+            margin: 10px 1px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function capitalize (word) {
+                let lower = word.toLowerCase();
+                let mergeLowerUpper = word.charAt(0).toUpperCase()
+                + lower.slice(1);
+                alert(mergeLowerUpper);
+            }
+            console.log(capitalize("HONEY"));
+        </script>
+  <input class="numberInput" type="text">
+</body>
+</html>
